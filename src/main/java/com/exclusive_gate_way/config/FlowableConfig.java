@@ -5,9 +5,7 @@ import org.flowable.spring.boot.EngineConfigurationConfigurer;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * @author haiyangp
- * date:  2018/4/7
- * desc: flowable配置----为防止生成的流程图中中文乱码
+ *  防止中文乱码
  */
 @Configuration
 public class FlowableConfig implements EngineConfigurationConfigurer<SpringProcessEngineConfiguration> {
