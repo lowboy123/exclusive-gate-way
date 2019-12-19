@@ -8,7 +8,7 @@ import org.flowable.image.ProcessDiagramGenerator;
 import org.flowable.task.api.Task;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletResponse;
@@ -43,7 +43,7 @@ public class ShowController {
      * 输入 processInstance 流程实例的ID ，即可获取当前的进度
      * @param processId 任务ID
      */
-    @PostMapping(value = "/processDiagram")
+    @GetMapping(value = "/processDiagram")
     public void genProcessDiagram(HttpServletResponse httpServletResponse, String processId) throws Exception {
         ProcessInstance pi = runtimeService.createProcessInstanceQuery().processInstanceId(processId).singleResult();
 
